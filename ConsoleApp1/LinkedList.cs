@@ -9,9 +9,9 @@ namespace DataStructuresExamples
 {
     public class Node
     {
-        public int Data { get; set; }
+        public double Data { get; set; }
         public Node Next { get; set; }
-        public Node(int data)
+        public Node(double data)
         {
             Data = data;
             Next = null;
@@ -32,7 +32,7 @@ namespace DataStructuresExamples
             }
             Console.WriteLine("");
         }
-        public void Add(int data)
+        public void Add(double data)
         {
             Node newNode = new Node(data);
             if (Head == null)
@@ -152,6 +152,17 @@ namespace DataStructuresExamples
             }
         }
 
+        public void ReverseUsingRecursion(Node node)
+        {
+            var current = node;
+            var next = current.Next;
+            if(next == null)
+            {
+                return;
+            }
+            ReverseUsingRecursion(next);
+            Console.WriteLine(current.Data);
+        }
         public Node Intersect(Node head,Node head2)
         {
             var nodePointers = new HashSet<Node>();
@@ -254,6 +265,16 @@ namespace DataStructuresExamples
                 current = current.Next;
             }
             return current;
+        }
+
+        public bool isLinkedListEven()
+        {
+            var current = Head;
+            while(current !=null && current.Next != null)
+            {
+                current = current.Next.Next;
+            }
+            return current == null ? true : false;
         }
     }
 }

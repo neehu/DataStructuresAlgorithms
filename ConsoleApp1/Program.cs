@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ConsoleApp1;
+using DSAPracticeProblems;
 using DataStructuresExamples;
 using System.Text;
 
@@ -67,7 +67,7 @@ list1.Add(3);
 list1.Add(4);
 list1.Add(5);
 list1.Add(6);
-list1.Add(7);
+//list1.Add(7);
 
 
 LinkedList list2 = new LinkedList();
@@ -82,3 +82,16 @@ var middleOfTheNode = list1.MiddleUsingHashSet();
 
 Console.WriteLine($"Intersection point is {intersectionNode.Data}");
 Console.WriteLine($"Middle of the list is {middleOfTheNode.Data}");
+
+list1.ReverseUsingRecursion(list1.Head);
+
+Console.WriteLine($"Given list is even : {list1.isLinkedListEven()}");
+
+var list3 = new LinkedList();
+list3.Add(1.5);
+list3.Add(2.5);
+list3.Add(3.5);
+list3.Add(4.5);
+list3.Add(5.5);
+
+SortedLists.Merge(list3, list1).Display();
