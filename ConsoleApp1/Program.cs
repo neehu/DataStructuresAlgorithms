@@ -95,3 +95,13 @@ list3.Add(4.5);
 list3.Add(5.5);
 
 SortedLists.Merge(list3, list1).Display();
+
+
+var candies = new int[] { 2, 3, 5,1,3 };
+var extraCandies = 3;
+var result = ExtraCandiesProblem.KidsWithCandies(candies, extraCandies);
+
+foreach (var item in result)
+{
+    Console.WriteLine(item);
+}

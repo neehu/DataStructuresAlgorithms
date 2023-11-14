@@ -152,6 +152,19 @@ namespace DataStructuresExamples
             }
         }
 
+        public void ReverseInPairs()
+        {
+            var current = Head;
+            Node previous = null;
+
+            while(current.Next != null) { 
+                var next = current.Next;
+                previous = current;
+                current.Next = next.Next;
+                next.Next = previous;
+                current = current.Next;
+            }
+        }
         public void ReverseUsingRecursion(Node node)
         {
             var current = node;
